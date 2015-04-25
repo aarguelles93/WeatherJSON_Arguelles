@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by Andres Arguelles on 24/04/2015.
@@ -45,11 +46,15 @@ public class Frag2 extends Fragment{
         mEditTextDay4 = (EditText) rootView.findViewById(R.id.editTextHumidity);
         mEditTextDay5 = (EditText) rootView.findViewById(R.id.editTextPressure);
 
-        mButton = (Button) rootView.findViewById(R.id.buttonCurrent);
+        mButton = (Button) rootView.findViewById(R.id.buttonForecast);
         mButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view) {
+                String msg="Loading forecast";
+                Toast toast = Toast.makeText(getActivity().getApplicationContext(), msg, Toast.LENGTH_LONG);
+                toast.show();
+
                 obj = new HandleJSON(uriAPI);
                 obj.fetchJSON(2);
 

@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity$PlaceholderFragment">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Forecast"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp" />
+
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".MainActivity$PlaceholderFragment">
+        android:layout_height="0dp"
+        android:id="@+id/scrollView"
+        android:layout_weight="8">
 
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Forecast"
-            android:id="@+id/textView"
-            android:layout_gravity="center_horizontal" />
-
-
-            <LinearLayout
+        <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:layout_margin="5dp">
 
             <LinearLayout
@@ -156,14 +160,15 @@
                     android:enabled="false" />
             </LinearLayout>
         </LinearLayout>
+    </ScrollView>
 
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Query"
-            android:id="@+id/buttonCurrent"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="20dp" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:text="Query"
+        android:id="@+id/buttonForecast"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:layout_weight="2" />
 
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>

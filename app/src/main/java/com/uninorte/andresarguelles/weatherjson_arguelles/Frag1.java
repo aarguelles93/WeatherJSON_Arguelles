@@ -1,5 +1,6 @@
 package com.uninorte.andresarguelles.weatherjson_arguelles;
 
+import android.app.Application;
 import android.hardware.Sensor;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by Andres Arguelles on 24/04/2015.
@@ -53,6 +55,10 @@ public class Frag1 extends Fragment{
         {
             @Override
             public void onClick(View view) {
+                String msg="Loading current weather";
+                Toast toast = Toast.makeText(getActivity().getApplicationContext(), msg, Toast.LENGTH_LONG);
+                toast.show();
+
                 obj = new HandleJSON(uriAPI);
                 obj.fetchJSON(1);
 
