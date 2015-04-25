@@ -1,164 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity$PlaceholderFragment">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Forecast"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal" />
-
-
-        <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp">
+        tools:context=".MainActivity$PlaceholderFragment">
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Day 1:"
-                android:id="@+id/textView2"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Forecast"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal" />
 
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/editTextMainWeather"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="5"
-                android:editable="false"
-                android:enabled="false" />
+
+            <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Day 1:"
+                    android:id="@+id/textView2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/editTextMainWeather"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="5"
+                    android:editable="false"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Day 2:"
+                    android:id="@+id/textView3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/editTextDescriptionWeather"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="5"
+                    android:editable="false"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Day 3:"
+                    android:id="@+id/textView4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/editTextTemperature"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="5"
+                    android:editable="false"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Day 4:"
+                    android:id="@+id/textView5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/editTextHumidity"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="5"
+                    android:editable="false"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Day 5:"
+                    android:id="@+id/textView6"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/editTextPressure"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="5"
+                    android:editable="false"
+                    android:enabled="false" />
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" >
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Query"
+            android:id="@+id/buttonCurrent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Day 2:"
-                android:id="@+id/textView3"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/editTextDescriptionWeather"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="5"
-                android:editable="false"
-                android:enabled="false" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Day 3:"
-                android:id="@+id/textView4"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/editTextTemperature"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="5"
-                android:editable="false"
-                android:enabled="false" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Day 4:"
-                android:id="@+id/textView5"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/editTextHumidity"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="5"
-                android:editable="false"
-                android:enabled="false" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Day 5:"
-                android:id="@+id/textView6"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/editTextPressure"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="5"
-                android:editable="false"
-                android:enabled="false" />
-        </LinearLayout>
     </LinearLayout>
-
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Query"
-        android:id="@+id/buttonCurrent"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp" />
-
-</LinearLayout>
+</ScrollView>
