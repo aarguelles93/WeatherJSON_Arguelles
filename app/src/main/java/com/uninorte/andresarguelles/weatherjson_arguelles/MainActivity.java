@@ -1,61 +1,54 @@
 package com.uninorte.andresarguelles.weatherjson_arguelles;
 
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 
 public class MainActivity extends ActionBarActivity {
 
-    public String currentAPI;
-    public String forecastAPI;
+    /**
+     * The {@link android.support.v4.view.PagerAdapter} that will provide
+     * fragments for each of the sections. We use a
+     * {@link android.support.v4.app.FragmentPagerAdapter} derivative, which will keep every
+     * loaded fragment in memory. If this becomes too memory intensive, it
+     * may be best to switch to a
+     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
+     */
+    SectionsPagerAdapter mSectionsPagerAdapter;
 
-    TextView textView;
-    Button button;
+    /**
+     * The {@link android.support.v4.view.ViewPager} that will host the section contents.
+     */
+    ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        currentAPI = "api.openweathermap.org/data/2.5/weather?q=London,uk";
-        forecastAPI = "api.openweathermap.org/data/2.5/forecast/daily?q=Barranquilla,CO&units=mentric&cnt=6&mode=json";
+        // Create the adapter that will return a fragment for each of the three
+        // primary sections of the activity.
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-        textView = (TextView) findViewById(R.id.textView);
-        button = (Button) findViewById(R.id.button);
+        // Set up the ViewPager with the sections adapter.
+        mViewPager = (ViewPager) findViewById(R.id.pager);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
+
+        mViewPager.setPageTransformer(true, new DepthPageTransformer());
+
+
+        //forecastAPI = "api.openweathermap.org/data/2.5/forecast/daily?q=Barranquilla,CO&units=mentric&cnt=6&mode=json";
     }
 
-    public void httpRequester() {
-        String response;
 
-        URL urlCurrent = null;
-        HttpURLConnection urlConnection;
 
-        try {
-            urlCurrent = new URL(currentAPI);
-            URL urlForecast = new URL (forecastAPI);
-            urlConnection = (HttpURLConnection) urlCurrent.openConnection();
-            InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-            response = convertStreamToString(in);
-            textView.setText(response);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e){
-            //
-        }
-    }
-
-    static String convertStreamToString(java.io.InputStream is) {
+    public static String convertStreamToString(java.io.InputStream is) {
         java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
         return s.hasNext() ? s.next() : "";
     }

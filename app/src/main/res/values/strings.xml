@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">WeatherJSON_Arguelles</string>
 
+    <string name="title_section1">Current</string>
+    <string name="title_section2">Forecast</string>
+
+
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 </resources>
