@@ -13,10 +13,10 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Forecast"
         android:id="@+id/textView"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp" />
+        android:layout_gravity="center_horizontal" />
 
-    <LinearLayout
+
+        <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
